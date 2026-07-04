@@ -1,0 +1,29 @@
+# Прод-конфигурация для /srv/apps/botyard-hub/ на VPS платформы (см. MASTER_CONTEXT §1).
+# Никакой БД/Redis — реестр модулей статичный (backend/app/registry.py),
+# фидбэк уходит напрямую владельцу через Bot API, ничего не хранится.
+
+services:
+  backend:
+    build: ./backend
+    network_mode: host
+    env_file: .env
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: 256M
+
+  bot:
+    build:
+      context: ./bot
+    network_mode: host
+    env_file: .env
+    restart: unless-stopped
+    depends_on:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: 256M

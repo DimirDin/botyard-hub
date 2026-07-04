@@ -1,0 +1,16 @@
+# Локальная разработка — те же сервисы, без network_mode: host.
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3016:3016"
+    env_file: .env
+    restart: unless-stopped
+
+  bot:
+    build:
+      context: ./bot
+    env_file: .env
+    restart: unless-stopped
+    depends_on:
+      - backend
