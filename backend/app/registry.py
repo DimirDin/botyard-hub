@@ -53,4 +53,25 @@ MODULES = [
         "desc": "Энциклопедия по Claude Code / Claude.ai / API.",
         "username": "bazadry_bot",
     },
+    {
+        "slug": "habits",
+        "name": "Трекер привычек",
+        "emoji": "✅",
+        "desc": "Ежедневные привычки, стрики и heatmap выполнения.",
+        "username": "botyardhabitsbot",
+    },
+    {
+        "slug": "subs",
+        "name": "Трекер подписок",
+        "emoji": "💳",
+        "desc": "Учёт подписок и напоминания перед списанием.",
+        "username": "botyardsubsbot",
+    },
+    {
+        "slug": "trader",
+        "name": "Бумажный трейдер",
+        "emoji": "📈",
+        "desc": "Симулятор биржевой торговли без риска на реальные деньги.",
+        "username": "botyardtraderbot",
+    },
 ]
