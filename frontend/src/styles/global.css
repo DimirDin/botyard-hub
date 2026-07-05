@@ -100,7 +100,7 @@ button {
 }
 
 .deck-tab:first-child { border-radius: 6px 0 0 6px; }
-.deck-tab:last-child { border-radius: 0 6px 6px 0; border-left: none; }
+.deck-tab:last-child { border-radius: 0 6px 6px 0; }
 
 .deck-tab--active {
   background: var(--panel-2);
@@ -148,6 +148,14 @@ button {
   justify-content: center;
   font-size: 20px;
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+.module-row__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .module-row__body {
@@ -225,7 +233,7 @@ button {
   border-radius: 6px;
   padding: 12px;
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   resize: vertical;
   outline: none;

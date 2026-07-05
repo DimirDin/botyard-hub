@@ -9,7 +9,9 @@ export function ModuleRow({ mod }) {
         openBot(mod.username);
       }}
     >
-      <div className="module-row__socket">{mod.emoji}</div>
+      <div className="module-row__socket">
+        {mod.icon ? <img src={mod.icon} alt="" className="module-row__icon" /> : mod.emoji}
+      </div>
       <div className="module-row__body">
         <div className="module-row__name">{mod.name}</div>
         <div className="module-row__desc">{mod.desc}</div>
