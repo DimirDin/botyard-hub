@@ -27,7 +27,7 @@ MODULES = [
     },
     {
         "slug": "tarot",
-        "name": "TaroT",
+        "name": "taroT",
         "icon": "/icons/tarot.png",
         "desc": "Расклады Таро с толкованием карт под твой вопрос — любовь, карьера, решения.",
         "username": "botyardtarotbot",
